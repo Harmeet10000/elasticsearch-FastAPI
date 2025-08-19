@@ -1,0 +1,286 @@
+{
+  "info": {
+    "name": "Elasticsearch Python API",
+    "description": "Collection for testing Elasticsearch search APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Root Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Regular Search - Basic",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/regular_search/?search_query=machine learning",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "regular_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "machine learning"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Regular Search - With Pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/regular_search/?search_query=python&skip=10&limit=5",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "regular_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "python"
+            },
+            {
+              "key": "skip",
+              "value": "10"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Regular Search - With Year Filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/regular_search/?search_query=data science&year=2023",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "regular_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "data science"
+            },
+            {
+              "key": "year",
+              "value": "2023"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Regular Search - N-Gram Tokenizer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/regular_search/?search_query=artificial intelligence&tokenizer=N-Gram",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "regular_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "artificial intelligence"
+            },
+            {
+              "key": "tokenizer",
+              "value": "N-Gram"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Regular Search - All Parameters",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/regular_search/?search_query=neural networks&skip=0&limit=20&year=2022&tokenizer=Standard",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "regular_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "neural networks"
+            },
+            {
+              "key": "skip",
+              "value": "0"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            },
+            {
+              "key": "year",
+              "value": "2022"
+            },
+            {
+              "key": "tokenizer",
+              "value": "Standard"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Semantic Search - Basic",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/semantic_search/?search_query=deep learning algorithms",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "semantic_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "deep learning algorithms"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Semantic Search - With Pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/semantic_search/?search_query=computer vision&skip=5&limit=15",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "semantic_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "computer vision"
+            },
+            {
+              "key": "skip",
+              "value": "5"
+            },
+            {
+              "key": "limit",
+              "value": "15"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Semantic Search - With Year Filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/semantic_search/?search_query=natural language processing&year=2021",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "semantic_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "natural language processing"
+            },
+            {
+              "key": "year",
+              "value": "2021"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Semantic Search - All Parameters",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/semantic_search/?search_query=reinforcement learning&skip=0&limit=25&year=2023",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "semantic_search", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "reinforcement learning"
+            },
+            {
+              "key": "skip",
+              "value": "0"
+            },
+            {
+              "key": "limit",
+              "value": "25"
+            },
+            {
+              "key": "year",
+              "value": "2023"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Docs Per Year Count - Standard Tokenizer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/get_docs_per_year_count/?search_query=machine learning",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "get_docs_per_year_count", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "machine learning"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Docs Per Year Count - N-Gram Tokenizer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/get_docs_per_year_count/?search_query=data analysis&tokenizer=N-Gram",
+          "host": ["{{base_url}}"],
+          "path": ["api", "v1", "get_docs_per_year_count", ""],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "data analysis"
+            },
+            {
+              "key": "tokenizer",
+              "value": "N-Gram"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+}

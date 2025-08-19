@@ -1,47 +1,101 @@
-# Elasticsearch Python Tutorial
+# 🔍 Elasticsearch Python Tutorial
 
-Welcome to the Elasticsearch Python Tutorial repository! This resource is designed to help you get better at Elasticsearch using the Python client. Inside, you'll find notebooks, slides, and a YouTube series to guide you through the learning process.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Elasticsearch](https://img.shields.io/badge/Elasticsearch-8.x-yellow.svg)](https://www.elastic.co/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
+[![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 
-## Repository contents
+A comprehensive tutorial repository for mastering Elasticsearch with Python. This hands-on course covers everything from basic search operations to advanced semantic search using vector embeddings.
 
-- `notebooks/`: Jupyter notebooks with hands-on Elasticsearch examples.
-- `slides/`: Presentation slides used in the YouTube series.
-- `data/`: Datasets used in the tutorials.
+## 🎯 What I  Learnt
 
-## YouTube series
+This course provided by freecodecamp gives practical experience with key Elasticsearch concepts:
 
-In this YouTube series, we explain some concepts in details. Each video corresponds to specific notebooks. The notebooks have a prefix in this format `<video_number>_notebook_name`, for example `3_create_index` corresponds to the 3rd video in the series.
+- 🔎 **Regular Search** - Multi-field queries with pagination and filtering
+- 📝 **N-gram Tokenization** - Advanced text analysis for better search results
+- 🧠 **Semantic Search** - Vector embeddings for contextual understanding
+- 📊 **Aggregations** - Data analytics and statistical operations
+- 🎯 **KNN Search** - Similarity matching with embeddings
+- 🔄 **Data Ingest Pipelines** - Automated data processing workflows
 
-[Watch the Elasticsearch Python tutorial series](https://www.youtube.com/watch?v=U3EUBGMVWZ4&list=PLMSb3cZXtIfpiHVLwXhaWk3KDXuklHdj5)
+## 📁 Repository Structure
 
-## Getting started
+```
+├── notebooks/          # Interactive Jupyter notebooks with examples
+├── slides/            # Course presentation materials
+├── data/              # Sample datasets for tutorials
+└── final_project/     # Complete FastAPI application
+    ├── backend/       # API server with search endpoints
+    └── frontend/      # React-based user interface
+```
 
-1. Clone this repository:
+## 🚀 Quick Start
 
-    ```bash
-    git clone https://github.com/ImadSaddik/ElasticSearch_Python_Tutorial
-    ```
+### Prerequisites
+- Python 3.8+
+- Elasticsearch 8.x
+- Docker (optional)
 
-2. Install the required dependencies:
+### Installation
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Harmeet10000/elasticsearch-FastAPI.git
+   cd elasticsearch-FastAPI
+   ```
 
-3. Open the notebooks in the `notebooks/` directory and start learning!
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Prerequisites
+3. **Start Elasticsearch**
+   ```bash
+   docker run -d --name elasticsearch \
+     -p 9200:9200 -p 9300:9300 \
+     -e "discovery.type=single-node" \
+     elasticsearch:8.11.0
+   ```
 
-- Basic Python knowledge
-- Familiarity with data structures and JSON
-- Elasticsearch installed locally or access to a remote instance, watch this [video](https://www.youtube.com/watch?v=U3EUBGMVWZ4) to install Elasticsearch locally.
+4. **Run the final project**
+   ```bash
+   cd final_project/backend
+   uvicorn main:app --reload
+   ```
 
-## Contributing
+## 🛠️ Technologies Used
 
-We welcome contributions! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+- **Backend**: FastAPI, Python
+- **Search Engine**: Elasticsearch
+- **ML Models**: Sentence Transformers
+- **Frontend**: Vue
+- **Data Processing**: Pandas, NumPy
 
-## Contact
+## 📚 Learning Path
 
-For any questions or feedback, please reach out to [simad3647@gmail.com](mailto:simad3647@gmail.com) or leave a comment on the YouTube videos.
+1. **Fundamentals** - Start with basic Elasticsearch concepts
+2. **Search Operations** - Learn querying and filtering
+3. **Text Analysis** - Explore tokenization and analyzers
+4. **Vector Search** - Implement semantic search with embeddings
+5. **Analytics** - Master aggregations and data insights
+6. **Final Project** - Build a complete search application
 
-Happy learning, and enjoy your journey into Elasticsearch with Python!
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to:
+- Report bugs or issues
+- Suggest new features or improvements
+- Submit pull requests
+- Share feedback and experiences
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎓 Acknowledgments
+
+Special thanks to the Elasticsearch and Python communities for their excellent documentation and resources.
+
+---
+
+**Happy learning!** 🚀 Dive into the world of modern search with Elasticsearch and Python.
