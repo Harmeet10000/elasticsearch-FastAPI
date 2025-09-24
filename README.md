@@ -18,17 +18,6 @@ This course provided by freecodecamp gives practical experience with key Elastic
 - 🎯 **KNN Search** - Similarity matching with embeddings
 - 🔄 **Data Ingest Pipelines** - Automated data processing workflows
 
-## 📁 Repository Structure
-
-```
-├── notebooks/          # Interactive Jupyter notebooks with examples
-├── slides/            # Course presentation materials
-├── data/              # Sample datasets for tutorials
-└── final_project/     # Complete FastAPI application
-    ├── backend/       # API server with search endpoints
-    └── frontend/      # React-based user interface
-```
-
 ## 🚀 Quick Start
 
 ### Prerequisites
